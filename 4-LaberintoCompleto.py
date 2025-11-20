@@ -1,4 +1,6 @@
 import random
+from colorama import init
+init()  # Activa soporte ANSI en Windows automáticamente
 
 # Colores ANSI
 RESET = "\033[0m"
@@ -110,7 +112,7 @@ while jugando:
             elif casilla == "S":
                 lab[pos_i][pos_j] = 0
                 lab[ni][nj] = "P"
-                imprimir_laberinto(lab)
+                #imprimir_laberinto(lab)
                 print("¡Has ganado!")
                 jugando = False
 
@@ -139,7 +141,7 @@ while jugando:
                 '''
                 pos_i, pos_j = tele_i, tele_j
                 lab[pos_i][pos_j] = "P"
-                imprimir_laberinto(lab)
+                #imprimir_laberinto(lab)
 
             # 4) Casilla normal
             else:
@@ -150,7 +152,7 @@ while jugando:
                 pos_j = nj
                 '''
                 pos_i, pos_j = ni, nj
-                imprimir_laberinto(lab)
+                #imprimir_laberinto(lab)
 
             # ----------------------------
             # MOVIMIENTO DE TODOS LOS MONSTRUOS
